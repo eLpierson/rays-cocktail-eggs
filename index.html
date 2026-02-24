@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ray's Cocktail Eggs | Pickled Quail Eggs | San Francisco</title>
+    <meta name="description" content="Hard-cooked quail eggs pickled in a tangy brine of vinegar and spices. The perfect cocktail garnish for martinis and Bloody Marys.">
+    <meta property="og:title" content="Ray's Cocktail Eggs | Pickled Quail Eggs">
+    <meta property="og:description" content="Your Cocktail Just Woke Up. Hard-cooked quail eggs pickled in a tangy brine of vinegar and spices.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;600;700;800&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* ===== Reset & Base ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; color: #333; overflow-x: hidden; }
+        img { max-width: 100%; display: block; }
+
+        /* ===== Hero Section ===== */
+        .hero {
+            background: #000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+        .hero-tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            color: #b0a44e;
+            font-size: 1.35rem;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+        .hero-logo {
+            max-width: 380px;
+            width: 75%;
+        }
+
+        /* ===== Welcome Section ===== */
+        .welcome {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 90vh;
+        }
+        .welcome-text {
+            background: #1c2b3a;
+            padding: 80px 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .welcome-text h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 2.6rem;
+            color: #fff;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+            line-height: 1.2;
+        }
+        .welcome-text p {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 1rem;
+            color: #96a7b5;
+            line-height: 1.85;
+            margin-bottom: 22px;
+        }
+        .welcome-image {
+            background-image: url('images/martini-topdown.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+        }
+
+        /* ===== Reviews Section ===== */
+        .reviews {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .review-col {
+            padding: 60px 45px 70px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .review-col:nth-child(1) { background: #6b6d3a; }
+        .review-col:nth-child(2) { background: #b3af60; }
+        .review-col:nth-child(3) { background: #6b6d3a; }
+
+        .quote-mark {
+            font-size: 5rem;
+            color: #4a6fa5;
+            font-family: Georgia, serif;
+            line-height: 0.8;
+            margin-bottom: 15px;
+        }
+        .reviews-heading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #4a6fa5;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        .reviewer-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+        .reviewer-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            margin-bottom: 28px;
+        }
+        .review-quote {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            line-height: 2;
+            color: #1a1a1a;
+        }
+
+        /* ===== How Can I Get Some Section ===== */
+        .how-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: #9ab0c0;
+        }
+        .how-image {
+            background-image: url('images/bloody-mary.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 600px;
+        }
+        .how-text {
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .how-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 2.8rem;
+            color: #2a2a2a;
+            margin-bottom: 40px;
+            letter-spacing: 3px;
+        }
+        .how-text p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            line-height: 2;
+            color: #2a2a2a;
+        }
+        .how-text p em {
+            font-style: italic;
+        }
+        .how-text a {
+            color: #2a2a2a;
+            text-decoration: underline;
+        }
+        .how-text a:hover {
+            color: #000;
+        }
+        .how-spacer {
+            height: 20px;
+        }
+
+        /* ===== Our Story Section ===== */
+        .our-story {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr 1fr;
+        }
+        .story-image-left {
+            background-image: url('images/martini-side.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 650px;
+        }
+        .story-image-right {
+            background-image: url('images/cocktail-amber.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 650px;
+        }
+        .story-text {
+            background: #f2eadc;
+            padding: 80px 55px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .story-text h2 {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 4.2rem;
+            color: #b5a050;
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+        .story-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 0.8rem;
+            letter-spacing: 5px;
+            color: #8a8a7a;
+            margin-bottom: 40px;
+        }
+        .story-text p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            line-height: 1.75;
+            color: #444;
+            margin-bottom: 22px;
+        }
+        .story-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ===== Meet The Team Section ===== */
+        .meet-team {
+            background: #5a7a8d;
+            padding: 80px 40px 100px;
+            text-align: center;
+        }
+        .meet-team h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 2.8rem;
+            color: #2a3d4e;
+            margin-bottom: 60px;
+        }
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .team-member {
+            flex: 0 1 380px;
+            text-align: center;
+        }
+        .team-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 25px;
+        }
+        .team-name {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 1.8rem;
+            color: #1a2a3a;
+            line-height: 1.3;
+        }
+        .team-role {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 1.5rem;
+            color: #1a2a3a;
+            margin-bottom: 30px;
+        }
+        .team-bio {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #1c2c3c;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background: #000;
+            color: #666;
+            text-align: center;
+            padding: 45px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+        }
+        footer a {
+            color: #b0a44e;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        footer p + p {
+            margin-top: 10px;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 1024px) {
+            .our-story {
+                grid-template-columns: 1fr;
+            }
+            .story-image-left {
+                order: 1;
+                min-height: 400px;
+            }
+            .story-text {
+                order: 2;
+            }
+            .story-image-right {
+                order: 3;
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                flex-direction: column;
+                align-items: center;
+                gap: 60px;
+            }
+            .welcome {
+                grid-template-columns: 1fr;
+            }
+            .welcome-text {
+                padding: 60px 35px;
+                order: 1;
+            }
+            .welcome-text h2 {
+                font-size: 1.8rem;
+                letter-spacing: 4px;
+            }
+            .welcome-image {
+                order: 2;
+                min-height: 350px;
+            }
+            .reviews {
+                grid-template-columns: 1fr;
+            }
+            .review-col {
+                padding: 45px 30px 50px;
+            }
+            .how-section {
+                grid-template-columns: 1fr;
+            }
+            .how-image {
+                min-height: 400px;
+            }
+            .how-text {
+                padding: 60px 35px;
+            }
+            .how-text h2 {
+                font-size: 2rem;
+            }
+            .our-story {
+                grid-template-columns: 1fr;
+            }
+            .story-image-left,
+            .story-image-right {
+                min-height: 350px;
+            }
+            .story-text {
+                padding: 60px 30px;
+            }
+            .story-text h2 {
+                font-size: 3rem;
+            }
+            .hero-tagline {
+                font-size: 1.1rem;
+            }
+            .hero-logo {
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="hero">
+        <p class="hero-tagline">Your Cocktail Just Woke Up</p>
+        <img src="images/logo.png" alt="Ray's Cocktail Eggs" class="hero-logo">
+    </section>
+
+    <!-- Welcome to the Cocktail Egg -->
+    <section class="welcome">
+        <div class="welcome-text">
+            <h2>Welcome to the Cocktail Egg</h2>
+            <p>What is the Cocktail Egg? It's a delicious hard-cooked quail egg pickled in a tangy brine of vinegar and spices. From the creaminess of the yolk to the sweet-sour bite of the white, the Cocktail Egg is a perfectly textured garnish for a classic evening cocktail or savory Bloody Mary.</p>
+            <p>Try ordering one at a bar and watch for curious glances from those around you. As you enjoy your drink you'll have one problem to wrestle with: Will you eat the egg right away or save it until the end? Our favorite is somewhere in the last third of the drink, when the egg has absorbed the flavor of the cocktail.</p>
+        </div>
+        <div class="welcome-image" role="img" aria-label="Top-down view of a martini with a pickled quail egg garnish"></div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+        <div class="review-col">
+            <div class="quote-mark">&ldquo;</div>
+            <div class="reviewer-name">Alix Wall</div>
+            <div class="reviewer-title">Writer for NY Times and J News of Northern CA</div>
+            <div class="review-quote">&ldquo;They make a delicious shot of protein, straight out of the jar.&rdquo;</div>
+        </div>
+        <div class="review-col">
+            <div class="reviews-heading">Reviews</div>
+            <div class="reviewer-name">Robert Simonson</div>
+            <div class="reviewer-title">NY Times Cocktail Writer, James Beard Award Nominee</div>
+            <div class="review-quote">&ldquo;They are quite wonderful. I was worried they would be overly briny or egg-y and throw off the crystalline clarity of a martini&rsquo;s flavor. But the eggs sit in happy harmony within the drink.&rdquo;</div>
+        </div>
+        <div class="review-col">
+            <div class="quote-mark">&rdquo;</div>
+            <div class="reviewer-name">CityGalBakes</div>
+            <div class="reviewer-title">Baker and Influencer</div>
+            <div class="review-quote">&ldquo;When it&rsquo;s &ldquo;I need to grocery shop&rdquo; day and your lunch salad looks sad&hellip;then you remember the jar of @rays_cocktail_eggs in the fridge. I feel so bougie!&rdquo;</div>
+        </div>
+    </section>
+
+    <!-- How Can I Get Some? -->
+    <section class="how-section">
+        <div class="how-image" role="img" aria-label="Bloody Mary garnished with a pickled quail egg alongside a jar of Ray's Cocktail Eggs"></div>
+        <div class="how-text">
+            <h2>How Can I Get Some?</h2>
+            <p>
+                Ray's Cocktail Eggs are available in<br>
+                San Francisco at<br>
+                <a href="https://slakesf.com" target="_blank" rel="noopener">SLAKE</a>, <a href="https://www.noevalleywineandspirits.com" target="_blank" rel="noopener">Noe Valley Wine &amp; Spirits</a>,<br>
+                and <a href="https://holbrookhouse.com" target="_blank" rel="noopener">Holbrook House</a>
+            </p>
+            <div class="how-spacer"></div>
+            <p><a href="https://www.drfranklinssf.com" target="_blank" rel="noopener">Driver's Market</a> in Sausalito</p>
+            <div class="how-spacer"></div>
+            <p><em>and</em></p>
+            <div class="how-spacer"></div>
+            <p><a href="https://www.solanocellars.com" target="_blank" rel="noopener">Solano Cellars</a> in Berkeley</p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="our-story">
+        <div class="story-image-left" role="img" aria-label="Elegant martini glass with pickled quail egg and olive garnish"></div>
+        <div class="story-text">
+            <h2>Our Story</h2>
+            <p class="story-subtitle">How the idea was hatched</p>
+            <p>After co-owning a bar for 20 years, Scott Kravitz knew the cocktail world pretty well. But with a new child on the way, he was spending less time going out. That's when he started making pickled eggs at home - a treat he had only seen in old movies. It was his friend Dmitry who said, "Have you tried this with quail eggs?"</p>
+            <p>Scott suddenly imagined an egg <em>inside</em> a drink, instead of beside the drink.</p>
+            <p>He worked on the recipe for over a year, struggling to create an egg that tasted great on its own, but didn't clash with the gin in a martini. It had to be subtle, but delicious.</p>
+            <p>He succeeded.</p>
+        </div>
+        <div class="story-image-right" role="img" aria-label="Amber cocktail garnished with a pickled quail egg"></div>
+    </section>
+
+    <!-- Meet The Team -->
+    <section class="meet-team">
+        <h2>Meet The Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="images/scott.jpg" alt="Scott Kravitz" class="team-photo">
+                <div class="team-name">Scott Kravitz</div>
+                <div class="team-role">Founder/CEO</div>
+                <p class="team-bio">Scott didn't leave a high paying corporate job to start Ray's Pickled Eggs. He didn't have one to begin with. What he did have was passion and enough inexperience to think that starting a food business would be relatively straightforward.</p>
+            </div>
+            <div class="team-member">
+                <img src="images/ray.jpg" alt="Ray" class="team-photo">
+                <div class="team-name">Ray</div>
+                <div class="team-role">Product Tester</div>
+                <p class="team-bio">I am a dinosaur.<br>A really big dinosaur.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Ray's Cocktail Eggs &middot; San Francisco, CA</p>
+        <p><a href="https://www.instagram.com/rays_cocktail_eggs" target="_blank" rel="noopener">@rays_cocktail_eggs</a></p>
+    </footer>
+
+</body>
+</html>
