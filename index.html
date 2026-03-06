@@ -19,27 +19,37 @@
         img { max-width: 100%; display: block; }
 
         /* ===== Hero Section ===== */
+        .hero-wrapper {
+            position: relative;
+            height: 100vh;
+        }
         .hero {
             background: #000;
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 60px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: -1;
         }
         .hero-tagline {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-weight: 400;
-            color: #b0a44e;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            color: #bcb55d;
             font-size: 1.35rem;
             margin-bottom: 50px;
-            letter-spacing: 2px;
+            letter-spacing: 4px;
+            text-align: center;
         }
         .hero-logo {
-            max-width: 380px;
-            width: 75%;
+            max-width: 520px;
+            width: 80%;
         }
 
         /* ===== Welcome Section ===== */
@@ -47,6 +57,8 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             min-height: 90vh;
+            position: relative;
+            z-index: 1;
         }
         .welcome-text {
             background: #1c2b3a;
@@ -77,6 +89,7 @@
             background-image: url('images/martini-topdown.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             min-height: 500px;
         }
 
@@ -84,6 +97,8 @@
         .reviews {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
+            position: relative;
+            z-index: 1;
         }
         .review-col {
             padding: 60px 45px 70px;
@@ -145,11 +160,14 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             background: #9ab0c0;
+            position: relative;
+            z-index: 1;
         }
         .how-image {
             background-image: url('images/bloody-mary.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             min-height: 600px;
         }
         .how-text {
@@ -193,17 +211,21 @@
         .our-story {
             display: grid;
             grid-template-columns: 1fr 1.4fr 1fr;
+            position: relative;
+            z-index: 1;
         }
         .story-image-left {
             background-image: url('images/martini-side.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             min-height: 650px;
         }
         .story-image-right {
             background-image: url('images/cocktail-amber.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             min-height: 650px;
         }
         .story-text {
@@ -246,6 +268,8 @@
             background: #5a7a8d;
             padding: 80px 40px 100px;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
         .meet-team h2 {
             font-family: 'Playfair Display', serif;
@@ -293,25 +317,41 @@
 
         /* ===== Footer ===== */
         footer {
-            background: #000;
-            color: #666;
-            text-align: center;
-            padding: 45px 20px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.75rem;
-            letter-spacing: 2px;
+            background: #1c2b3a;
+            color: #96a7b5;
+            padding: 80px 60px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
         }
-        footer a {
-            color: #b0a44e;
-            text-decoration: none;
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        footer a:hover {
-            text-decoration: underline;
+        .footer-info {
+            padding-top: 20px;
         }
-        footer p + p {
+        .footer-company {
+            font-size: 1.1rem;
+        }
+        .footer-spacer {
+            height: 20px;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
             margin-top: 10px;
         }
-
+        .social-icons a {
+            color: #96a7b5;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #fff;
+        }
         /* ===== Responsive ===== */
         @media (max-width: 1024px) {
             .our-story {
@@ -388,16 +428,21 @@
             .hero-logo {
                 max-width: 280px;
             }
+            footer {
+                padding: 60px 35px;
+            }
         }
     </style>
 </head>
 <body>
 
     <!-- Hero -->
-    <section class="hero">
-        <p class="hero-tagline">Your Cocktail Just Woke Up</p>
-        <img src="images/logo.png" alt="Ray's Cocktail Eggs" class="hero-logo">
-    </section>
+    <div class="hero-wrapper">
+        <section class="hero">
+            <p class="hero-tagline">Your Cocktail Just Woke Up</p>
+            <img src="images/logo.png" alt="Ray's Cocktail Eggs" class="hero-logo">
+        </section>
+    </div>
 
     <!-- Welcome to the Cocktail Egg -->
     <section class="welcome">
@@ -484,10 +529,27 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Ray's Cocktail Eggs &middot; San Francisco, CA</p>
-        <p><a href="https://www.instagram.com/rays_cocktail_eggs" target="_blank" rel="noopener">@rays_cocktail_eggs</a></p>
+    <!-- Contact / Footer -->
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <p class="footer-company">Ray's Pickled Eggs LLC</p>
+                <p>San Francisco, CA</p>
+                <div class="footer-spacer"></div>
+                <p>Tel: 415-699-8693</p>
+                <div class="footer-spacer"></div>
+                <p>scott@rayspickledeggs.com</p>
+                <div class="footer-spacer"></div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/RaysCocktailEggs/" target="_blank" rel="noopener" aria-label="Facebook">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.991 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.356c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.491 0-1.956.925-1.956 1.875v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 22.954 24 17.991 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/rays_cocktail_eggs/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
 
 </body>
